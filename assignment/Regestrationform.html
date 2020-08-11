@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Regestration form</title>
+    <!--bootstrap links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!--css link-->
+    <link rel="stylesheet" href="style.css">
+    <!--jquery cdn-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!--js file attacment-->
+    <script src="script/registrationForm.js"></script>
+
+</head>
+<body>
+    <div class="heading py-5 text-center ">
+        <!--heading-->
+        <h2>Event Registration Form </h2>
+    </div>
+
+    <div class="container">
+        <div>
+            <form>
+                <div class='row'>
+
+                    <div class="forml col-lg-6 ">
+                        <table id="table1" cellspacing="0">
+                            <tr>
+                                <td align="right"><label for="firstName" class="txtAlign"> First name</label></td>
+                                <td><input class="firstCaps" type="text" maxlength="50" placeholder="Please enter your first name" ></td>
+
+                            </tr>
+                            <tr>
+                                <td align="right"><label for="LastName" class="txtAlign"> Last name</label></td>
+                                <td><input type="text" maxlength="50" placeholder="Please enter your last name"></td>
+
+                            </tr>
+                            <tr>
+                                <td align="right"><label for="Company " class="txtAlign"> Company</label></td>
+                                <td><input type="text" maxlength="50" placeholder="Please enter your company name"></td>
+
+                            </tr>
+                            <tr>
+                                <td align="right"><label for="Email" class="txtAlign" > Email</label></td>
+                                <td><input type="email" maxlength="50"
+                                           pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                                           required  placeholder="Please enter your email"></td>
+
+                            </tr>
+                            <tr>
+                                <td align="right"><label for="Phone" class="txtAlign">Phone</label></td>
+                                <td><input type="number" maxlength="50" placeholder="Please enter your phone" onkeypress="if(this.value.length==10) return false;"></td>
+
+                            </tr>
+                            <tr>
+                                <td align="right"><label for="Destination" class="txtAlign">Destination</label></td>
+                                <td><input type="text" maxlength="50" placeholder="Please enter your designation"></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <div class="forml col-lg-6 text-left">
+                        <table cellspacing="0">
+                            <tr>
+                                <td align="right"><label for=" MealPreference" class="txtAlign"> Meal Preference</label></td>
+                                <td><input type="text" maxlength="50"></td>
+
+                            </tr>
+                            <tr>
+                                <td align="right"><label for="PaymentMode" class="txtAlign topPadding"> Payment Mode</label></td>
+                                <td>
+                                    <!-- Group of cashRadios -->
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="cash" name="PaymentMode" checked>
+                                        <label class="custom-control-label" for="cash">Cash</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <!-- Group of cardRadios -->
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="card" name="PaymentMode">
+                                        <label class="custom-control-label" for="card">Card</label>
+                                    </div>
+                                </td>
+
+
+                            </tr>
+                            <tr class="amt">
+                                <!-- amount which allow only 5 number not allowed any symblos -->
+                                <td align="right"><label for="Amount " class="txtAlign "> Amount</label></td>
+                                <td style="padding-top:1.15rem">
+                                    <input type="number" onselectstart="return false"
+                                           onpaste="return false;" onCopy="return false"
+                                           onCut="return false" onDrag="return false"
+                                           onDrop="return false" autocomplete=off
+                                           onkeypress="if(this.value.length==5) return false;" style="width:80%;" placeholder="Enter amount"> $
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <!-- card type with img and radio btn -->
+                                <td align="right"><label for="CardType" class="txtAlign"> Card Type</label></td>
+                                <td>
+                                    <div class="cardPostion">
+                                        <input type="radio" name="CardType" class="cardType" disabled="disabled" style="height:.85rem; width:.85rem;" />
+                                        <img src="photos/mastercard.png" class="cardImg" />
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="cardPostion" style="width:8rem">
+                                        <input type="radio" name="CardType" disabled="disabled" class="cardType" style="height:.85rem; width:.85rem;" />
+                                        <img style="width:4rem" src="photos/visa.png" class="cardImg" />
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td align="right"><label for="CardNumber" class="txtAlign inputclass">Card Number</label></td>
+                                <td>
+                                    <input id="CardNumber" class="cardnum" type="number"  onselectstart="return false"
+                                           onpaste="return false;" onCopy="return false" value=""
+                                           onCut="return false" onDrag="return false"
+                                           onDrop="return false" autocomplete='off'
+                                           onkeypress="if(this.value.length==16) return false;" placeholder=" **** **** **** ****" disabled="disabled">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td align="left" colspan="3">
+
+                                    <div class="chkbox">
+                                        <input type="checkbox" name="couponCheckbox" id="couponCheckbox">
+                                        <label for="a" class="txtAlign">You have Coupon ?</label>
+
+
+                                    </div>
+                                    <div class="chkbox1">
+                                        <label for="CouponCode" class="chkbox1 txtAlign">Coupon Code</label>
+                                        <input type="text" id="CouponCode" maxlength="15" style="width:7rem" placeholder="Enter a code" disabled="disabled">
+                                    </div>
+                                </td>
+                                <td>
+                                </td>
+
+                            </tr>
+
+
+                        </table>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container table-responsive-xl " style="position:relative;top:-4rem">
+        <table class="table2 gridTable table table-hover ">
+            <thead class="thead-dark">
+            <th class="topic">Topic</th>
+            <th class="Speaker">Speaker</th>
+            <th class="Date">Date</th>
+            <th class="Time">Time</th>
+            <th class="AvailableSlot" colspan="3">Available Slot</th>
+            <th class="Select">Select</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="topic"></td>
+                    <td class="Speaker"></td>
+                    <td class="Date"></td>
+                    <td class="Time"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="Select" align="center"><input type="checkbox" class="Select" style="width:1rem;height:1rem;  text-align: center; vertical-align:bottom;" /></td>
+                </tr>
+                <tr>
+                    <td class="topic"></td>
+                    <td class="Speaker"></td>
+                    <td class="Date"></td>
+                    <td class="Time"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="Select" align="center"><input type="checkbox" class="Select" style="width:1rem;height:1rem;  text-align: center; vertical-align:bottom;" /></td>
+                </tr>
+                <tr>
+                    <td class="topic"></td>
+                    <td class="Speaker"></td>
+                    <td class="Date"></td>
+                    <td class="Time"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="Select" align="center"><input type="checkbox" class="Select" style="width:1rem;height:1rem;  text-align: center; vertical-align:bottom;" /></td>
+                </tr>
+                <tr>
+                    <td class="topic"></td>
+                    <td class="Speaker"></td>
+                    <td class="Date"></td>
+                    <td class="Time"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="Select" align="center"><input type="checkbox" class="Select" style="width:1rem;height:1rem;  text-align: center; vertical-align:bottom;" /></td>
+                </tr>
+                <tr>
+                    <td class="topic"></td>
+                    <td class="Speaker"></td>
+                    <td class="Date"></td>
+                    <td class="Time"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="Select" align="center"><input type="checkbox" class="Select" style="width:1rem;height:1rem;  text-align: center; vertical-align:bottom;" /></td>
+                </tr>
+                <tr>
+                    <td class="topic"></td>
+                    <td class="Speaker"></td>
+                    <td class="Date"></td>
+                    <td class="Time"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="Select" align="center"><input type="checkbox" class="Select" style="width:1rem;height:1rem;  text-align: center; vertical-align:bottom;" /></td>
+                </tr>
+                <tr>
+                    <td class="topic"></td>
+                    <td class="Speaker"></td>
+                    <td class="Date"></td>
+                    <td class="Time"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="Select" align="center"><input type="checkbox" class="Select" style="width:1rem;height:1rem;  text-align: center; vertical-align:bottom;" /></td>
+                </tr>
+                <tr>
+                    <td class="topic"></td>
+                    <td class="Speaker"></td>
+                    <td class="Date"></td>
+                    <td class="Time"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="Select" align="center"><input type="checkbox" class="Select" style="width:1rem;height:1rem;  text-align: center; vertical-align:bottom;" /></td>
+                </tr>
+                <tr>
+                    <td class="topic"></td>
+                    <td class="Speaker"></td>
+                    <td class="Date"></td>
+                    <td class="Time"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="Select" align="center"><input type="checkbox" class="Select" style="width:1rem;height:1rem;  text-align: center; vertical-align:bottom;" /></td>
+                </tr>
+                <tr>
+                    <td class="topic"></td>
+                    <td class="Speaker"></td>
+                    <td class="Date"></td>
+                    <td class="Time"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="AvailableSlot"></td>
+                    <td class="Select" align="center"><input type="checkbox" class="Select" style="width:1rem;height:1rem;  text-align: center; vertical-align:bottom;" /></td>
+                </tr>
+
+
+            </tbody>
+
+
+        </table>
+    </div>
+    <div style="text-align:center;position:relative;top:-2rem">
+        <p id="result"></p>
+    </div>
+    
+
+    <div class="container btnClass">
+
+        <input id="submitBtn" class="button" type="submit" value="Submit">
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>
