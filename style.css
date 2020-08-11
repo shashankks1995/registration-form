@@ -1,0 +1,212 @@
+﻿body
+{
+   
+}
+h2{
+    font-weight: bold;
+    font-size:2.5rem;
+}
+input{
+    width:150%;
+    height:2.3rem;
+    margin-bottom:1rem;
+    font-weight:600;
+   
+}
+  
+table{
+    text-align:center;
+   
+  
+}
+@media (max-width:950px){
+    table{
+      align-content :center;
+    }
+}
+
+th, td {
+        padding-bottom: 10px;
+        padding-left:0.8rem;
+        align-content:center;
+       
+    }
+
+.forml {
+        text-align: center;
+        margin-left:0;
+        
+    }
+.txtAlign {
+   font-weight:600;
+    
+    font-size:1rem;
+}
+
+/* place holder font size and opacity */
+
+input::-webkit-input-placeholder {
+    font-size: .8rem;
+    line-height: 1rem;
+    opacity:80%;
+    
+}
+
+/* removing arrow in of input[type]=number*/
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+input[type=radio] 
+{ /* Change width and height */
+    width: 1rem;
+    height: 1rem;
+    margin-right:1rem;
+    margin-left:1rem;
+}
+/* card image width*/
+.cardImg{
+    width:4rem ;
+    
+}
+.cardPostion input{
+    position:relative;
+    left:5%;
+    top:10%;
+    
+}
+.cardPostion img {
+    position: relative;
+    left: 0rem;
+}
+
+}/*card position on differnt size*/
+@media only screen and (max-width: 600px) {
+    .cardPostion input {
+        position: relative;
+        left: -1rem;
+        top: -.7rem
+    }
+    .cardPostion img {
+        position: relative;
+        left: -2rem;
+        top:-1rem;
+    }
+
+}
+
+/*place holder font-size and weight changed*/
+
+    input.cardnum::-webkit-input-placeholder {
+        font-size: 2.3rem;
+        vertical-align: text-bottom;
+        text-align: center;
+        position: relative;
+        top: 12px;
+    }
+.amt{
+    vertical-align:text-bottom;
+}
+.form-group {
+    display: inline-block;
+   width:100%;
+
+}
+.chkbox label {
+    position: relative;
+    top: -1rem;
+    right:-3rem;
+    left:-2.8rem;
+}
+.chkbox input {
+    position: relative;
+    left:7.5rem;
+    width:1rem;
+    
+}
+.chkbox1 label {
+    position: relative;
+    top: -3.5rem;
+    right:5rem;
+    left:10rem;
+}
+.chkbox1 input {
+    position: relative;
+    left:10rem;
+    top:-3.5rem;
+   
+    width: 5rem;
+}
+/*to capitize the first letter*/
+input[type='text']{
+    text-transform: capitalize;
+   
+}
+/*table styles*/
+
+ .table2 th, .table2 td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.table2 td.topic, td.Speaker {
+    padding: 0rem 7rem;
+}
+
+.table2 td.Date, td.Select {
+    padding: 0rem 5rem;
+}
+
+    .table2 td.AvailableSlot {
+        padding: 0rem 2.4rem;
+    }
+
+    .table2 td.Time {
+        padding: 0rem 2.4rem;
+    }
+
+    td input[type='checkbox'] {
+        background-color: red;
+        border: 5rem;
+        position: relative;
+        top: .5rem;
+    }
+    /*button style*/
+.button {
+    background-color: #05379c; /* blue */
+    border: none;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    float: left;
+    width: 18%;
+    position: relative;
+    top: -2rem;
+}
+/*button class and hover*/
+.btnClass{
+ display:flex;
+ align-items:center;
+ justify-content:center;
+  
+}
+
+    .btnClass .button:hover {
+        background-color: #071bf7;
+        zoom:1.09;
+        border:solid 1px black;
+    }
+/* result */
+#result{
+    color:red;
+   font-size:1.2rem;
+   font-weight:600;
+}
+/*warning*/
+.intro{
+    border:3px solid red;
+}
